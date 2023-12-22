@@ -1,0 +1,210 @@
+
+.sidebar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 200px;
+    background: #000000;
+    padding: 10px 15px;
+}
+
+.logo{
+    width: 180px;
+    height: 200px;
+}
+
+.logovertical{
+    display: none;
+}
+
+nav{
+    position: relative;
+    top: 50px;
+    right: 0px;
+}
+
+nav ul{
+    display: flex;
+    flex-direction: column;
+}
+
+nav li{
+    margin: 0px 0px;
+    padding: 10px 5px;
+}
+
+nav li:hover{
+    background-color: #000000b3;
+}
+
+nav svg{
+    width: 20px;
+    height: 20px;
+    padding: 0px 5px;
+    fill:white;
+}
+
+nav a{
+    font-size: 30px;
+    color: #fff;
+    text-decoration: none;
+}
+
+
+
+nav svg:hover, a:hover{
+    color: #ffdd4c;
+    fill: #ffdd4c;
+    background-color: #000000b3;
+}
+
+
+.fondo{
+    width: 100vw;
+    height: 100vh;
+}
+
+.productos{
+    position:absolute;
+    top: 30%;
+    left: 250px;
+}
+
+.productos li{
+    display: inline-block;
+    background: #f9f8f89f;
+    text-align: center;
+    width: 27%;
+    height: 40%;
+    vertical-align: top;
+    margin: 0 1.5%;
+    padding: 5% 3%;
+    box-sizing: border-box;
+    border: 2px solid #FFFFFF;
+    border-radius: 10px;
+
+}
+
+.productos li img{
+    width: 80%;
+    height: 200px;
+    box-sizing: border-box;
+    border: 2px;
+    border-radius: 10px;
+    opacity: 90%;
+}
+
+.productos li:hover{
+    border-color:#c78c19;
+}
+
+.productos li:active{
+    border-color:#088c19;
+}
+
+.productos h2,.producto-descripcion, .producto-precio{
+    color: #010101ed;
+}
+
+.productos h2{
+    font-size: 150%;
+    font-weight: bold;
+}
+
+.productos li:hover h2{
+    font-size: 145%;
+}
+
+.producto-descripcion{
+    padding: 5px 0;
+    font-size: 18px;
+}
+
+.producto-precio{
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+form{
+    display: inline-block;
+    background: #f9f8f89f;
+    text-align: left;
+    position:absolute;
+    padding:50px 50px ;
+    z-index: 100;
+    top: 30%;
+    left: 40%;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+form div{
+    padding:5px 0;
+}
+
+@media screen and (max-width:655px){
+
+    .logo{
+        display: none;
+    }
+
+    .logovertical{
+        display: block;
+        width: 100%;
+        height: 150px;
+    }
+
+    .sidebar{
+        width: 75px;
+    }
+    nav{
+        position: static;
+    }
+
+    nav a{
+        display: none;
+    }
+
+    nav svg{
+        height: 30px;
+        width: 30px;
+        padding: 10px;
+        margin-left: 10px;
+    }
+
+    nav>ul>li:hover>a{
+        display: block;
+        font-size: 15px;
+        text-align: center;
+    }
+
+    .productos{
+        left: 100px;
+        padding: 1% 5%;
+    }
+
+    .productos li{
+        padding: 5% 3%;
+    }
+
+    .productos li img{
+        height: 100px;
+        
+    }
+
+    .productos h2, .producto-precio{
+        font-size: 15px;
+        font-weight: bold;
+    }
+    
+    .productos li:hover h2{
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .productos .producto-descripcion{
+        display: none;
+        font-size: 15px;
+    }
+}
